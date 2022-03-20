@@ -6,15 +6,24 @@ import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImgComponent } from './components/img/img.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductsComponent } from './components/products/products.component';
-import { NavComponent } from './components/nav/nav.component';
-import { ReversePipe } from './pipes/reverse.pipe';
-import { TimeAgoPipe } from './pipes/time-ago.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
+import { ImgComponent } from './webside/components/img/img.component';
+import { ProductComponent } from './webside/components/product/product.component';
+import { ProductsComponent } from './webside/components/products/products.component';
+import { NavComponent } from './webside/components/nav/nav.component';
+import { ReversePipe } from './webside/pipes/reverse.pipe';
+import { TimeAgoPipe } from './webside/pipes/time-ago.pipe';
+import { HighlightDirective } from './webside/directives/highlight.directive';
 import { TimeInterceptor } from './interceptors/time.interceptor';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { HomeComponent } from './webside/pages/home/home.component';
+import { NotFoundComponent } from './webside/pages/not-found/not-found.component';
+import { CategoryComponent } from './webside/pages/category/category.component';
+import { MycartComponent } from './webside/pages/mycart/mycart.component';
+import { LoginComponent } from './webside/pages/login/login.component';
+import { RegisterComponent } from './webside/pages/register/register.component';
+import { RecoveryComponent } from './webside/pages/recovery/recovery.component';
+import { ProfileComponent } from './webside/pages/profile/profile.component';
+import { ProductDetailComponent } from './webside/pages/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +34,16 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     NavComponent,
     ReversePipe,
     TimeAgoPipe,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent,
+    NotFoundComponent,
+    CategoryComponent,
+    MycartComponent,
+    LoginComponent,
+    RegisterComponent,
+    RecoveryComponent,
+    ProfileComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
