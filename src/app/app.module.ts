@@ -1,56 +1,34 @@
+
+
+// MODULOS
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { SwiperModule } from 'swiper/angular';
-
 import { AppRoutingModule } from './app-routing.module';
+import { QuicklinkModule} from 'ngx-quicklink';
+
+// COMPONENTES
 import { AppComponent } from './app.component';
-import { ImgComponent } from './webside/components/img/img.component';
-import { ProductComponent } from './webside/components/product/product.component';
-import { ProductsComponent } from './webside/components/products/products.component';
-import { NavComponent } from './webside/components/nav/nav.component';
-import { ReversePipe } from './webside/pipes/reverse.pipe';
-import { TimeAgoPipe } from './webside/pipes/time-ago.pipe';
-import { HighlightDirective } from './webside/directives/highlight.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+// INTERCEPTORES
 import { TimeInterceptor } from './interceptors/time.interceptor';
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { HomeComponent } from './webside/pages/home/home.component';
-import { NotFoundComponent } from './webside/pages/not-found/not-found.component';
-import { CategoryComponent } from './webside/pages/category/category.component';
-import { MycartComponent } from './webside/pages/mycart/mycart.component';
-import { LoginComponent } from './webside/pages/login/login.component';
-import { RegisterComponent } from './webside/pages/register/register.component';
-import { RecoveryComponent } from './webside/pages/recovery/recovery.component';
-import { ProfileComponent } from './webside/pages/profile/profile.component';
-import { ProductDetailComponent } from './webside/pages/product-detail/product-detail.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImgComponent,
-    ProductComponent,
-    ProductsComponent,
-    NavComponent,
-    ReversePipe,
-    TimeAgoPipe,
-    HighlightDirective,
-    HomeComponent,
-    NotFoundComponent,
-    CategoryComponent,
-    MycartComponent,
-    LoginComponent,
-    RegisterComponent,
-    RecoveryComponent,
-    ProfileComponent,
-    ProductDetailComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SwiperModule
+    QuicklinkModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },
